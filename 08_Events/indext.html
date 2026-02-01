@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(68, 67, 67);">
+    <h2 style="background-color: aliceblue;":>Amazing Photos</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="youtube"   src="https://play-lh.googleusercontent.com/6am0i3walYwNLc08QOOhRJttQENNGkhlKajXSERf3JnPVRQczIyxw2w3DxeMRTOSdsY" alt="Photo 1"></li>
+             <li><img width="200px" id="instagram"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeQEaLYtW8864NUrNmf8OtltgNKJSvhx5xA&s" alt="Photo 2"></li>
+            <li><img width="200px" id="whatsapp"    src="https://img.freepik.com/premium-vector/whatsapp-icon-3d-rendering_578229-154.jpg?semt=ais_hybrid&w=740&q=80" alt="Photo 3"></li>
+            <li><img width="200px" id="twitter"     src="https://store-images.s-microsoft.com/image/apps.60673.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.5d82b7eb-9734-4b51-b65d-a0383348ab1b?h=210" alt="Photo 4"></li>
+            <li><img width="200px" id="facebook"    src="https://yt3.googleusercontent.com/RhsrKM2HugvjGkbHXmo93C-q3qZLJk9hzfeJHmproNh4qb6UA5cC--l0mTZ2QuM-yXF1wYijgw=s900-c-k-c0x00ffffff-no-rj" alt="Photo 5"></li>
+            <li><a style="background-color: aqua;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    // document.getElementById("instagram").onclick=function(){
+    //     alert("Basic Instagram Click")
+    // }
+    // attachEvent
+    //jQuery - on
+     //type,timestamp,preventDefault
+    // target , toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    
+    // document.getElementById("images").addEventListener("click",function(e){
+    //     // alert("Instagram Click")
+    //     console.log("clicked inside the ul")
+    // },false)
+
+    // document.getElementById("instagram").addEventListener("click",function(e){
+    //     // alert("Instagram Click")
+    //     console.log("instagram clicked")
+    //     e.stopPropagation() // it will stop and made other activity stop 
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google clicked !")
+    // },false)
+
+    const images=document.getElementById("images")
+                         .addEventListener('click',function(e){
+
+                  if(e.target.tagName==="IMG"){
+                      console.log(e.target.id)
+                      let removeIt=e.target.parentNode;
+                      removeIt.remove();
+                  }
+                  
+                // removeIt.parentNode.removeChild(removeIt)
+    },false)
+   
+     
+
+    
+
+</script>
+</html>
