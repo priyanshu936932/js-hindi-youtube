@@ -1,0 +1,47 @@
+ <!-- Javascript is Synchronous and Single Threaded language -->
+<!--  But we can make it Asynchronous using Callbacks, Promises, Async/Await -->
+<!--  -->
+<!-- console.log("Start");    -->
+<!-- setTimeout(() => { -->
+<!-- console.log("Async Operation"); -->
+<!-- }, 2000); -->
+<!-- console.log("End"); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Javascript is Synchronous and Single Threaded language
+    </h1>
+    <button id="stop">Stop</button>
+    <script>
+        const sayPriyanshu=function(){
+            console.log("priyanshu");
+        }
+         setTimeout(sayPriyanshu,2000)
+        //  setInterval(function(){
+        //     console.log("Akash")
+        //  },2000)
+       const nameChanging= function(){
+       document.querySelector('h1').innerHTML="Best javascript Series";
+       }
+
+       const changeMe= setTimeout(nameChanging,2000);
+
+
+       document.querySelector("#stop").
+       addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+       })
+
+    </script>
+    
+</body>
+</html>
+
